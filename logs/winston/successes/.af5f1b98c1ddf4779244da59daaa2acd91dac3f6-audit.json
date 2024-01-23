@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\successes\\.af5f1b98c1ddf4779244da59daaa2acd91dac3f6-audit.json",
+    "files": [
+        {
+            "date": 1698301126824,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-26-10-12-success.log",
+            "hash": "37f6c8bfba3c2bb45922a1800beaa77acbaec5ada47122120d613bc48fec0d08"
+        },
+        {
+            "date": 1698305831850,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-26-10-13-success.log",
+            "hash": "9fa332fffd5adadb6a48599d043273069d7d4d20d7913ce581dfa6786fdef601"
+        },
+        {
+            "date": 1698307995070,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-26-10-14-success.log",
+            "hash": "646362d5ed6b61b92e8ecb710d2cb4004d6fc2fbd3ebf95d3287169405a723eb"
+        },
+        {
+            "date": 1698313199506,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-26-10-15-success.log",
+            "hash": "7d72534c98606db6cd814e7556de37b57b01b96a1aa7c00ea27b9435a00a9881"
+        },
+        {
+            "date": 1698314588793,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-26-10-16-success.log",
+            "hash": "fb1b0b707749d79eb2cad664a8e78f5d63d0674deb6a33b41aeb9956c0140a88"
+        }
+    ],
+    "hashType": "sha256"
+}

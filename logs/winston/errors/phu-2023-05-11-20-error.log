@@ -1,0 +1,2 @@
+Sun Nov 05 2023 20:44:54 } [PH] error: Failed to connect database queryTxt ETIMEOUT cluster0.afkplob.mongodb.net
+Sun Nov 05 2023 20:48:3 } [PH] error: Failed to connect database querySrv ETIMEOUT _mongodb._tcp.cluster0.afkplob.mongodb.net
