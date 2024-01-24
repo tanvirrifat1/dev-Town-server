@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose';
-import { ITask } from './task.interface';
+import { Schema, model } from "mongoose";
+import { ITask } from "./task.interface";
 
 const cartItem = new Schema<ITask>(
   {
@@ -16,6 +16,9 @@ const cartItem = new Schema<ITask>(
       type: String,
       required: true,
     },
+    date: {
+      type: String,
+    },
   },
   {
     timestamps: true,
@@ -25,4 +28,4 @@ const cartItem = new Schema<ITask>(
   }
 );
 
-export const Task = model<ITask>('task', cartItem);
+export const Task = model<ITask>("task", cartItem);
