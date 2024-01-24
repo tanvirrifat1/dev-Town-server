@@ -1,16 +1,13 @@
-import httpStatus from 'http-status';
-import ApiError from '../../../errors/ApiError';
 import { ITask } from './task.interface';
 import { Task } from './task.model';
 
 const interIntoDb = async (payload: ITask): Promise<ITask> => {
-  const res = await Task.findOne({
-    email: payload.email,
-    productId: payload.productId,
-  });
-  if (res) {
-    throw new ApiError(httpStatus.BAD_REQUEST, 'already add to cart');
-  }
+  //   const res = await Task.findOne({
+  //     title: payload.title,
+  //   });
+  //   if (res) {
+  //     throw new ApiError(httpStatus.BAD_REQUEST, 'already add to cart');
+  //   }
   const result = await Task.create(payload);
   return result;
 };
@@ -26,10 +23,10 @@ const getAllData = async (payload: ITask): Promise<ITask[]> => {
 //   return result;
 // };
 
-// const deleteData = async (id: string): Promise<ICart | null> => {
-//   const result = await Cart.findByIdAndDelete(id);
-//   return result;
-// };
+const deleteData = async (id: string): Promise<ITask | null> => {
+  const result = await Task.findByIdAndDelete(id);
+  return result;
+};
 
 // const updatedData = async (
 //   id: string,
@@ -47,4 +44,5 @@ const getAllData = async (payload: ITask): Promise<ITask[]> => {
 export const TaskService = {
   interIntoDb,
   getAllData,
+  deleteData,
 };

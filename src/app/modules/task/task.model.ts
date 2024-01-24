@@ -16,10 +16,6 @@ const cartItem = new Schema<ITask>(
       type: String,
       required: true,
     },
-    productId: {
-      type: String,
-      required: true,
-    },
   },
   {
     timestamps: true,

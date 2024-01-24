@@ -17,6 +17,17 @@ const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const deleteData = catchAsync(async (req: Request, res: Response) => {
+  const result = await TaskService.deleteData(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'task deleted successfully',
+    data: result,
+  });
+});
+
 const getAllData = catchAsync(async (req: Request, res: Response) => {
   const email = req.query.email as string;
   if (!email) {
@@ -41,4 +52,5 @@ const getAllData = catchAsync(async (req: Request, res: Response) => {
 export const TaskController = {
   insertIntoDb,
   getAllData,
+  deleteData,
 };
