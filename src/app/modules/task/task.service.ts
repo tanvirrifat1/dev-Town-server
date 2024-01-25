@@ -1,16 +1,14 @@
-import httpStatus from "http-status";
-import ApiError from "../../../errors/ApiError";
 import { ITask } from "./task.interface";
 import { Task } from "./task.model";
 
 const interIntoDb = async (payload: ITask): Promise<ITask> => {
-  const isBooked = await Task.findOne({
-    date: payload.date,
-  });
+  // const isBooked = await Task.findOne({
+  //   date: payload.date,
+  // });
 
-  if (isBooked) {
-    throw new ApiError(httpStatus.BAD_REQUEST, "already add to cart");
-  }
+  // if (isBooked) {
+  //   throw new ApiError(httpStatus.BAD_REQUEST, "already add to cart");
+  // }
   const result = await Task.create(payload);
   return result;
 };
@@ -18,6 +16,11 @@ const interIntoDb = async (payload: ITask): Promise<ITask> => {
 const getAllData = async (payload: ITask): Promise<ITask[]> => {
   const result = await Task.find({ email: payload.email });
 
+  return result;
+};
+
+const getSingleData = async (id: string): Promise<ITask | null> => {
+  const result = await Task.findById(id);
   return result;
 };
 
@@ -39,4 +42,5 @@ export const TaskService = {
   getAllData,
   deleteData,
   updatedData,
+  getSingleData,
 };

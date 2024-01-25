@@ -39,6 +39,17 @@ const updatedData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleData = catchAsync(async (req: Request, res: Response) => {
+  const result = await TaskService.getSingleData(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "task single get successfully",
+    data: result,
+  });
+});
+
 const getAllData = catchAsync(async (req: Request, res: Response) => {
   const email = req.query.email as string;
   if (!email) {
@@ -65,4 +76,5 @@ export const TaskController = {
   getAllData,
   deleteData,
   updatedData,
+  getSingleData,
 };
